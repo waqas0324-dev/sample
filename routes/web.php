@@ -9,7 +9,7 @@ use App\Http\Controllers\CartController;
 
 Route::get('/', [WebController::class, 'welcome'])->name('layouts-welcome');
 
-Route::get('shop', [WebController::class, 'shop'])->name('shop');
+// Route::get('shop', [WebController::class, 'shop'])->name('shop');
 
 Route::get('/layouts/home', [webController::class, 'home'])->name('layouts-home');
 Route::get('/layouts/about', [webController::class, 'about'])->name('layouts-about');
@@ -35,23 +35,12 @@ Route::get('/thankyou', function () {
     return view('thankyou');
 })->name('thankyou');
 
-
-
-
-
-
-
-
-
-
-
-
+// Admin-Panel Routes
 
 Route::get('/admin/adminmaster', [webController::class, 'adminmaster'])->name('admin-adminmaster');
 Route::get('/admin/adminhome', [webController::class, 'adminhome'])->name('admin-adminhome');
-
 Route::get('admin/create_product', [ProductController::class, 'create'])->name('admin-product-create');
-Route::post('admin/store-product', [ProductController::class, 'store'])->name('admin-product-store');
+Route::post('admin/store_product', [ProductController::class, 'store'])->name('admin-product-store');
 
 
 

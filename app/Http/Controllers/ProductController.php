@@ -19,18 +19,23 @@ class ProductController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'price' => 'required|numeric',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
+        // dd("got here");
         $product = new Product();
-        $product->name = $request->name;
-        $product->price = $request->price;
+        $product->Name = $request->name;
+        $product->Price = $request->price;
+        $product->save();
 
         if ($request->hasFile('image')) {
             $imageName = time().'.'.$request->image->extension();
             $request->image->move(public_path('images'), $imageName);
             $product->image = $imageName;
+            $product->save();
         }
+
+        return redirect()->route('admin-adminhome');
 
     }
 
