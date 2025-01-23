@@ -31,15 +31,15 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="{{ asset('layouts/home') }}">Home</a>
                 </li>
-                <li><a class="nav-link" href="{{ asset('layouts/shop') }}">Shop</a></li>
-                <li><a class="nav-link" href="{{ asset('layouts/about') }}">About us</a></li>
-                <li><a class="nav-link" href="{{ asset('layouts/services') }}">Services</a></li>
-                <li><a class="nav-link" href="{{ asset('layouts/blog') }}">Blog</a></li>
-                <li><a class="nav-link" href="{{ asset('layouts/contact') }}">Contact us</a></li>
+                <li><a class="nav-link" href="{{route('layouts-shop') }}">Shop</a></li>
+                <li><a class="nav-link" href="{{route('layouts-about') }}">About us</a></li>
+                <li><a class="nav-link" href="{{route('layouts-services') }}">Services</a></li>
+                <li><a class="nav-link" href="{{route('layouts-blog') }}">Blog</a></li>
+                <li><a class="nav-link" href="{{route('layouts-contact') }}">Contact us</a></li>
             </ul>
             <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
                 <li><a class="nav-link" href="#"><img src="{{ asset('images/user.svg') }}"></a></li>
-                <li><a class="nav-link" href="{{ asset('cart/index') }}"><img src="{{ asset('images/cart.svg') }}"></a></li>
+                <li><a class="nav-link" href="{{ route('cart.index') }}"><img src="{{ asset('images/cart.svg') }}"></a></li>
             </ul>
         </div>
     </div>

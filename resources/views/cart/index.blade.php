@@ -30,9 +30,9 @@
                                             <img src="{{ asset('images/' . $item->product->image) }}" alt="Image" class="img-fluid">
                                         </td>
                                         <td class="product-name">
-                                            <h2 class="h5 text-black">{{ $item->product->name }}</h2>
+                                            <h2 class="h5 text-black">{{ $item->product->Name }}</h2>
                                         </td>
-                                        <td>{{ $item->product->price }}</td>
+                                        <td>{{ $item->product->Price }}</td>
                                         <td>
                                             <div class="input-group mb-3 d-flex align-items-center quantity-container" style="max-width: 120px;">
                                                 <div class="input-group-prepend">
@@ -57,7 +57,7 @@
                         </tbody>
                     </table>
                 </div>
-                <button class="btn btn-black btn-sm btn-block" type="submit">Update Cart</button>
+                {{-- <button class="btn btn-black btn-sm btn-block" type="submit">Update Cart</button> --}}
             </form>
         </div>
         <div class="row">
@@ -76,20 +76,20 @@
                                 <h3 class="text-black h4 text-uppercase">Cart Totals</h3>
                             </div>
                         </div>
-                        <div class="row mb-3">
+                        {{-- <div class="row mb-3">
                             <div class="col-md-6">
                                 <span class="text-black">Subtotal</span>
                             </div>
                             <div class="col-md-6 text-right">
                                 <strong class="text-black">${{ $cart->sum(function($item) { return $item->product->price * $item->quantity; }) }}</strong>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="row mb-5">
                             <div class="col-md-6">
                                 <span class="text-black">Total</span>
                             </div>
                             <div class="col-md-6 text-right">
-                                <strong class="text-black">${{ $cart->sum(function($item) { return $item->product->price * $item->quantity; }) }}</strong>
+                                <strong class="text-black">${{ $cart->sum(function($item) { return $item->product->Price * $item->quantity; }) }}</strong>
                             </div>
                         </div>
                         <div class="row">

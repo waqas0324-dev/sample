@@ -45,7 +45,6 @@ class WebController extends Controller
         return view('layouts.shop', compact('products'));
     }
 
-
     public function adminmaster()
     {
         return view('admin.adminmaster');

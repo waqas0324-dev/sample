@@ -15,6 +15,11 @@ class CartController extends Controller
         $user = User::findOrFail(1);
         Auth::login($user);
         $cart = Cart::where('user_id', Auth::id())->with('product')->get();
+        // dd($cart[0]->product->Name);
+        // foreach ($cart as $item) {
+        //     dump($item->product->Name);
+        // }
+        // die();
         return view('cart.index', compact('cart'));
     }
 
