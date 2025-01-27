@@ -11,7 +11,7 @@
        background-repeat: no-repeat;
       background-size:cover;
     }
-h1{
+h1,h2{
    text-align: center;
 
 }
@@ -29,7 +29,8 @@ p{
 
 </style>
 <body>
- <h1>welcome to the laravel project </h1>
+   <u> <h1>Waqas Ashraf projects work on laravel</h1></u>
+ <h2>welcome to the laravel project </h2>
  <p><b>Laravel is a free, open-source PHP framework that helps web developers build modern web applications:</b></p>
 </body>
 </html>

@@ -28,8 +28,8 @@
                         <th scope="col" class="text-center">Name</th>
 
                         <th scope="col" class="text-center">Price</th>
-                        <th scope="col" class="text-center">Created At</th>
-                        <th scope="col" class="text-center">Action</th>
+                          <th scope="col" class="text-center">Created At</th> 
+                     <th scope="col" class="text-center">Action</th>
                     </tr>
                 </thead>
 

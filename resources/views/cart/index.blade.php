@@ -4,7 +4,7 @@
 <div class="untree_co-section before-footer-section">
     <div class="container">
         <div class="row mb-5">
-            <form action="{{ route('cart.update') }}" method="post">
+            <form action="{{ route('layouts-shop') }}" method="post">
                 @csrf
                 <div class="site-blocks-table">
                     <table class="table">
