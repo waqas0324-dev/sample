@@ -37,7 +37,7 @@
                 @foreach ($products as $product)
                 <tr class="border-2 border-bottom border-primary border-0">
                     <th scope="col" class="text-center">{{$product->id}}</th>
-                    <th scope="col" class="text-center"><img src="{{ $product->image }}" alt="{{ $product->name }}" width="50"></th>
+                    <th scope="col" class="text-center"><img src="{{ asset('images/'. $product->image)  }}" alt="{{ $product->name }}" width="50"></th>
 
                     <th scope="col" class="text-center">{{$product->Name}}</th>
 

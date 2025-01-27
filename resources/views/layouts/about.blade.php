@@ -13,7 +13,7 @@
             </div>
             <div class="col-lg-7">
                 <div class="hero-img-wrap">
-                    <img src="images/couch.png" class="img-fluid">
+                    <img src="{{asset('images/couch.png')}}" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -35,7 +35,7 @@
                 <div class="col-6 col-md-6">
                     <div class="feature">
                         <div class="icon">
-                            <img src="images/truck.svg" alt="Image" class="imf-fluid">
+                            <img src="{{asset('images/truck.svg')}}" alt="Image" class="imf-fluid">
                         </div>
                         <h3>Fast &amp; Free Shipping</h3>
                         <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
@@ -45,7 +45,7 @@
                 <div class="col-6 col-md-6">
                     <div class="feature">
                         <div class="icon">
-                            <img src="images/bag.svg" alt="Image" class="imf-fluid">
+                            <img src="{{asset('images/bag.svg')}}" alt="Image" class="imf-fluid">
                         </div>
                         <h3>Easy to Shop</h3>
                         <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
@@ -55,7 +55,7 @@
                 <div class="col-6 col-md-6">
                     <div class="feature">
                         <div class="icon">
-                            <img src="images/support.svg" alt="Image" class="imf-fluid">
+                            <img src="{{asset('images/support.svg')}}" alt="Image" class="imf-fluid">
                         </div>
                         <h3>24/7 Support</h3>
                         <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
@@ -65,7 +65,7 @@
                 <div class="col-6 col-md-6">
                     <div class="feature">
                         <div class="icon">
-                            <img src="images/return.svg" alt="Image" class="imf-fluid">
+                            <img src="{{asset('images/return.svg')}}" alt="Image" class="imf-fluid">
                         </div>
                         <h3>Hassle Free Returns</h3>
                         <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
@@ -77,7 +77,7 @@
 
         <div class="col-lg-5">
             <div class="img-wrap">
-                <img src="images/why-choose-us-img.jpg" alt="Image" class="img-fluid">
+                <img src="{{asset('images/why-choose-us-img.jpg')}}" alt="Image" class="img-fluid">
             </div>
         </div>
 
@@ -100,7 +100,7 @@
 
         <!-- Start Column 1 -->
         <div class="col-12 col-md-6 col-lg-3 mb-5 mb-md-0">
-            <img src="images/person_1.jpg" class="img-fluid mb-5">
+            <img src="{{asset('images/person_1.jpg')}}" class="img-fluid mb-5">
             <h3 clas><a href="#"><span class="">Lawson</span> Arnold</a></h3>
 <span class="d-block position mb-4">CEO, Founder, Atty.</span>
 <p>Separated they live in.
@@ -111,7 +111,7 @@ Separated they live in Bookmarksgrove right at the coast of the Semantics, a lar
 
         <!-- Start Column 2 -->
         <div class="col-12 col-md-6 col-lg-3 mb-5 mb-md-0">
-            <img src="images/person_2.jpg" class="img-fluid mb-5">
+            <img src="{{asset('images/person_2.jpg')}}" class="img-fluid mb-5">
 
             <h3 clas><a href="#"><span class="">Jeremy</span> Walker</a></h3>
 <span class="d-block position mb-4">CEO, Founder, Atty.</span>
@@ -124,7 +124,7 @@ Separated they live in Bookmarksgrove right at the coast of the Semantics, a lar
 
         <!-- Start Column 3 -->
         <div class="col-12 col-md-6 col-lg-3 mb-5 mb-md-0">
-            <img src="images/person_3.jpg" class="img-fluid mb-5">
+            <img src="{{asset('images/person_3.jpg')}}" class="img-fluid mb-5">
             <h3 clas><a href="#"><span class="">Patrik</span> White</a></h3>
 <span class="d-block position mb-4">CEO, Founder, Atty.</span>
 <p>Separated they live in.
@@ -135,7 +135,7 @@ Separated they live in Bookmarksgrove right at the coast of the Semantics, a lar
 
         <!-- Start Column 4 -->
         <div class="col-12 col-md-6 col-lg-3 mb-5 mb-md-0">
-            <img src="images/person_4.jpg" class="img-fluid mb-5">
+            <img src="{{asset('images/person_4.jpg')}}" class="img-fluid mb-5">
 
             <h3 clas><a href="#"><span class="">Kathryn</span> Ryan</a></h3>
 <span class="d-block position mb-4">CEO, Founder, Atty.</span>
@@ -187,7 +187,7 @@ Separated they live in Bookmarksgrove right at the coast of the Semantics, a lar
 
                                     <div class="author-info">
                                         <div class="author-pic">
-                                            <img src="images/person-1.png" alt="Maria Jones" class="img-fluid">
+                                            <img src="{{asset('images/person-1.png')}}" alt="Maria Jones" class="img-fluid">
                                         </div>
                                         <h3 class="font-weight-bold">Maria Jones</h3>
                                         <span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
@@ -210,7 +210,7 @@ Separated they live in Bookmarksgrove right at the coast of the Semantics, a lar
 
                                     <div class="author-info">
                                         <div class="author-pic">
-                                            <img src="images/person-1.png" alt="Maria Jones" class="img-fluid">
+                                            <img src="{{asset('images/person-1.png')}}" alt="Maria Jones" class="img-fluid">
                                         </div>
                                         <h3 class="font-weight-bold">Maria Jones</h3>
                                         <span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
@@ -233,7 +233,7 @@ Separated they live in Bookmarksgrove right at the coast of the Semantics, a lar
 
                                     <div class="author-info">
                                         <div class="author-pic">
-                                            <img src="images/person-1.png" alt="Maria Jones" class="img-fluid">
+                                            <img src="{{asset('images/person-1.png')}}" alt="Maria Jones" class="img-fluid">
                                         </div>
                                         <h3 class="font-weight-bold">Maria Jones</h3>
                                         <span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>

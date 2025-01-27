@@ -27,7 +27,11 @@
                                 @foreach($cart as $item)
                                     <tr>
                                         <td class="product-thumbnail">
-                                            <img src="{{ asset('images/' . $item->product->image) }}" alt="Image" class="img-fluid">
+                                            @if($item->product)
+                                                <img src="{{ asset('images/' . $item->product->image) }}" alt="Image" class="img-fluid">
+                                            @else
+                                                <p>No image available</p>
+                                            @endif
                                         </td>
                                         <td class="product-name">
                                             <h2 class="h5 text-black">{{ $item->product->Name }}</h2>
