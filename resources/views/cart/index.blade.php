@@ -34,26 +34,46 @@
                                             @endif
                                         </td>
                                         <td class="product-name">
-                                            <h2 class="h5 text-black">{{ $item->product->Name }}</h2>
+                                            @if($item->product)
+                                                <h2 class="h5 text-black">{{ $item->product->name }}</h2>
+                                            @else
+                                                <p>No product name available</p>
+                                            @endif
                                         </td>
-                                        <td>{{ $item->product->Price }}</td>
+                                        <td>
+                                            @if($item->product)
+                                                {{ $item->product->price }}
+                                            @else
+                                                <p>No price available</p>
+                                            @endif
+                                        </td>
                                         <td>
                                             <div class="input-group mb-3 d-flex align-items-center quantity-container" style="max-width: 120px;">
                                                 <div class="input-group-prepend">
                                                     <button class="btn btn-outline-black decrease" type="button">&minus;</button>
                                                 </div>
-                                                <input type="text" class="form-control text-center quantity-amount" name="quantity[{{ $item->product->id }}]" value="{{ $item->quantity }}" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                                <input type="text" class="form-control text-center quantity-amount" name="quantity[{{ $item->product ? $item->product->id : '' }}]" value="{{ $item->quantity }}" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
                                                 <div class="input-group-append">
                                                     <button class="btn btn-outline-black increase" type="button">&plus;</button>
                                                 </div>
                                             </div>
                                         </td>
-                                        <td>{{ $item->product->price * $item->quantity }}</td>
                                         <td>
-                                            <form action="{{ route('cart.remove', $item->product->id) }}" method="post">
-                                                @csrf
-                                                <button type="submit" class="btn btn-black btn-sm">X</button>
-                                            </form>
+                                            @if($item->product)
+                                                {{ $item->product->price * $item->quantity }}
+                                            @else
+                                                <p>No total available</p>
+                                            @endif
+                                        </td>
+                                        <td>
+                                            @if($item->product)
+                                                <form action="{{ route('cart.remove', $item->product->id) }}" method="post">
+                                                    @csrf
+                                                    <button type="submit" class="btn btn-black btn-sm">X</button>
+                                                </form>
+                                            @else
+                                                <p>No action available</p>
+                                            @endif
                                         </td>
                                     </tr>
                                 @endforeach
@@ -93,7 +113,7 @@
                                 <span class="text-black">Total</span>
                             </div>
                             <div class="col-md-6 text-right">
-                                <strong class="text-black">${{ $cart->sum(function($item) { return $item->product->Price * $item->quantity; }) }}</strong>
+                                <strong class="text-black">${{ $cart->sum(function($item) { return $item->product ? $item->product->price * $item->quantity : 0; }) }}</strong>
                             </div>
                         </div>
                         <div class="row">

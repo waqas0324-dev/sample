@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Cart;
 
-use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
@@ -22,10 +22,9 @@ class ProductController extends Controller
             'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
-        // dd("got here");
         $product = new Product();
-        $product->Name = $request->name;
-        $product->Price = $request->price;
+        $product->name = $request->name;
+        $product->price = $request->price;
         $product->save();
 
         if ($request->hasFile('image')) {
@@ -35,11 +34,6 @@ class ProductController extends Controller
             $product->save();
         }
 
-        return redirect()->route('admin-adminhome');
-
+        return redirect()->route('admin-adminhome')->with('success', 'Product created successfully.');
     }
-
-
 }
-
-

@@ -53,7 +53,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link"{{ url('/admin/orders') }} aria-expanded="false">
+              <a class="sidebar-link"{{url('/admin/orders')}} aria-expanded="false">
                 <span>
                   <iconify-icon icon="solar:danger-circle-bold-duotone" class="fs-6"></iconify-icon>
                 </span>

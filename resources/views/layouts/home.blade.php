@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    
+
 
 		<!-- Start Product Section -->
 		<div class="product-section">
@@ -23,7 +23,7 @@
 							<strong class="product-price">$50.00</strong>
 
 							<span class="icon-cross">
-								<img src="/images/cross.svg}}" class="img-fluid">
+								<img src="{{asset('images/cross.svg')}}" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -37,7 +37,7 @@
 							<strong class="product-price">$78.00</strong>
 
 							<span class="icon-cross">
-								<img src="images/cross.svg" class="img-fluid">
+								<img src="{{asset('images/cross.svg')}}" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -51,7 +51,7 @@
 							<strong class="product-price">$43.00</strong>
 
 							<span class="icon-cross">
-								<img src="images/cross.svg" class="img-fluid">
+								<img src="{{asset('images/cross.svg')}}" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -354,5 +354,34 @@
 			</div>
 		</div>
 		<!-- End Blog Section -->
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const buttons = document.querySelectorAll('.add-to-cart');
+        buttons.forEach(button => {
+            button.addEventListener('click', function () {
+                const productId = this.getAttribute('data-id');
+                fetch('/cart/add', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                    },
+                    body: JSON.stringify({ id: productId })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('Product added to cart successfully!');
+                    } else {
+                        alert('Failed to add product to cart.');
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+            });
+        });
+    });
+</script>
 @endsection
 
