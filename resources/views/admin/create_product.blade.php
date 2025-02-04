@@ -31,8 +31,8 @@
                     <div class="mb-3">
                         <label for="price" class="form-label">Price</label>
                         <div class="input-group">
-                            <span class="input-group-text">$</span>
-                            <input name="price" type="text" class="form-control" id="price" placeholder="50.00">
+                            {{-- <span class="input-group-text">$</span> --}}
+                            <input name="price" type="text" class="form-control" id="price" placeholder="">
                         </div>
                     </div>
                     <div class="mb-3">
